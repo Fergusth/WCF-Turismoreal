@@ -1,0 +1,15 @@
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\bin\Release\Biblioteca.dll.config
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\bin\Release\Biblioteca.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\bin\Release\Biblioteca.pdb
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\bin\Release\ConectorOracle.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\bin\Release\EntityFramework.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\bin\Release\ConectorOracle.pdb
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\bin\Release\ConectorOracle.dll.config
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\bin\Release\EntityFramework.xml
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\obj\Release\Biblioteca.csprojAssemblyReference.cache
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\obj\Release\Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\obj\Release\Biblioteca.csproj.CopyComplete
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\obj\Release\Biblioteca.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Biblioteca\obj\Release\Biblioteca.pdb

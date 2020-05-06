@@ -1,0 +1,15 @@
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\bin\Debug\Clases.dll.config
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\bin\Debug\Clases.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\bin\Debug\Clases.pdb
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\bin\Debug\EntityFramework.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\bin\Debug\OracleConnector.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\bin\Debug\OracleConnector.pdb
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\bin\Debug\OracleConnector.dll.config
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\bin\Debug\EntityFramework.xml
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\obj\Debug\Clases.csprojAssemblyReference.cache
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\obj\Debug\Clases.csproj.CopyComplete
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\obj\Debug\Clases.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\Clases\obj\Debug\Clases.pdb

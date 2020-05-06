@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2608ed50b4864dd58ffd5f422b2f0d0f" Name="Diagram1" ZoomLevel="87">
+        <EntityTypeShape EntityType="BDTurismoR.ACOMPAÑANTE" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.CIUDAD" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.CONDUCTOR" Width="1.5" PointX="9" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.DEPARTAMENTO" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.FOTO_DEPT" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.INVENTARIO" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.MANTENCION" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.MULTA" Width="1.5" PointX="10.5" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.RESERVA" Width="1.5" PointX="8.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.ROL" Width="1.5" PointX="3.75" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.SERVICIO_EXTRA" Width="1.5" PointX="8.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.SERVICIO_TOURS" Width="1.5" PointX="5.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.SERVICIO_TRANSPORTE" Width="1.5" PointX="11.25" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.USUARIO" Width="1.5" PointX="6" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.VEHICULO" Width="1.5" PointX="11.25" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.ZONA_TOUR" Width="1.5" PointX="3" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.CHECKLIST" Width="1.5" PointX="7.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.RESERVA_SERVICIO" Width="1.5" PointX="10.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.RESERVA_TOUR" Width="1.5" PointX="10.5" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDTurismoR.RESERVA_TRANSPORTE" Width="1.5" PointX="13.5" PointY="14.75" IsExpanded="true" />
+        <AssociationConnector Association="BDTurismoR.DEPARTAMENTO_CIUDAD_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.ZONA_TOUR_CIUDAD_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.SERVICIO_CONDUCTOR_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.VEHICULO_CONDUCTOR_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.FOTO_DEPT_DEPARTAMENTO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.INVENTARIO_DEPARTAMENTO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.MANTENCION_DEPARTAMENTO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.RESERVA_DEPARTAMENTO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.CHECKLIST_INVENTARIO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.MULTA_RESERVA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.CHECKLIST_RESERVA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.RESERVA_SERVICIO_RESERVA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.RESERVA_TOUR_RESERVA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.RESERVA_TRANSPORTE_RESERVA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.RESERVA_USUARIO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.USUARIO_ROL_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.RESERVA_SERV_EXTRA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.RESERVA_TOUR_SERVICIO_TOURS_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.SERVICIO_TOURS_ZONA_TOUR_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.RESERVA_TRANSPORTE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="BDTurismoR.RESERVA_ACOMP" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

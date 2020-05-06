@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Modelo_TRStoreContainer" CdmEntityContainer="BD_TurismoReal">
+    <EntitySetMapping Name="ACOMPAÑANTE">
+      <EntityTypeMapping TypeName="Modelo_TR.ACOMPAÑANTE">
+        <MappingFragment StoreEntitySet="ACOMPAÑANTE">
+          <ScalarProperty Name="DNI_ACOMPANANTE" ColumnName="DNI_ACOMPANANTE" />
+          <ScalarProperty Name="NOMBRE_COMPLETO" ColumnName="NOMBRE_COMPLETO" />
+          <ScalarProperty Name="EXTRANJERO" ColumnName="EXTRANJERO" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CIUDAD">
+      <EntityTypeMapping TypeName="Modelo_TR.CIUDAD">
+        <MappingFragment StoreEntitySet="CIUDAD">
+          <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+          <ScalarProperty Name="NOMBRE_CIUDAD" ColumnName="NOMBRE_CIUDAD" />
+          <ScalarProperty Name="N_REGION" ColumnName="N_REGION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONDUCTOR">
+      <EntityTypeMapping TypeName="Modelo_TR.CONDUCTOR">
+        <MappingFragment StoreEntitySet="CONDUCTOR">
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="EXTRANJERO" ColumnName="EXTRANJERO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPARTAMENTO">
+      <EntityTypeMapping TypeName="Modelo_TR.DEPARTAMENTO">
+        <MappingFragment StoreEntitySet="DEPARTAMENTO">
+          <ScalarProperty Name="ID_DEPARTAMENTO" ColumnName="ID_DEPARTAMENTO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="CANT_BANIOS" ColumnName="CANT_BANIOS" />
+          <ScalarProperty Name="CANT_DORMITORIOS" ColumnName="CANT_DORMITORIOS" />
+          <ScalarProperty Name="PRECIO_DIARIO" ColumnName="PRECIO_DIARIO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVADO" ColumnName="ACTIVADO" />
+          <ScalarProperty Name="CONDICIONES_USO" ColumnName="CONDICIONES_USO" />
+          <ScalarProperty Name="PORCENTAJE" ColumnName="PORCENTAJE" />
+          <ScalarProperty Name="CIUDAD_ID_CIUDAD" ColumnName="CIUDAD_ID_CIUDAD" />
+          <ScalarProperty Name="INTERNET" ColumnName="INTERNET" />
+          <ScalarProperty Name="CALEFACCION" ColumnName="CALEFACCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FOTO_DEPT">
+      <EntityTypeMapping TypeName="Modelo_TR.FOTO_DEPT">
+        <MappingFragment StoreEntitySet="FOTO_DEPT">
+          <ScalarProperty Name="ID_FOTO" ColumnName="ID_FOTO" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+          <ScalarProperty Name="DEPARTAMENTO_ID_DEPARTAMENTO" ColumnName="DEPARTAMENTO_ID_DEPARTAMENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTARIO">
+      <EntityTypeMapping TypeName="Modelo_TR.INVENTARIO">
+        <MappingFragment StoreEntitySet="INVENTARIO">
+          <ScalarProperty Name="ID_INVENTARIO" ColumnName="ID_INVENTARIO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="IMPORTANTE" ColumnName="IMPORTANTE" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DEPARTAMENTO_ID_DEPARTAMENTO" ColumnName="DEPARTAMENTO_ID_DEPARTAMENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MANTENCION">
+      <EntityTypeMapping TypeName="Modelo_TR.MANTENCION">
+        <MappingFragment StoreEntitySet="MANTENCION">
+          <ScalarProperty Name="ID_MANTENCION" ColumnName="ID_MANTENCION" />
+          <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+          <ScalarProperty Name="FECHA_TERMINO" ColumnName="FECHA_TERMINO" />
+          <ScalarProperty Name="COSTO" ColumnName="COSTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="DEPARTAMENTO_ID_DEPARTAMENTO" ColumnName="DEPARTAMENTO_ID_DEPARTAMENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MULTA">
+      <EntityTypeMapping TypeName="Modelo_TR.MULTA">
+        <MappingFragment StoreEntitySet="MULTA">
+          <ScalarProperty Name="ID_MULTA" ColumnName="ID_MULTA" />
+          <ScalarProperty Name="TOTAL_MULTA" ColumnName="TOTAL_MULTA" />
+          <ScalarProperty Name="TOTAL_PAGADO" ColumnName="TOTAL_PAGADO" />
+          <ScalarProperty Name="PAGADO" ColumnName="PAGADO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="RESERVA_ID_RESERVA" ColumnName="RESERVA_ID_RESERVA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESERVA">
+      <EntityTypeMapping TypeName="Modelo_TR.RESERVA">
+        <MappingFragment StoreEntitySet="RESERVA">
+          <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
+          <ScalarProperty Name="FECHA_CHECKIN" ColumnName="FECHA_CHECKIN" />
+          <ScalarProperty Name="FECHA_CHECKOUT" ColumnName="FECHA_CHECKOUT" />
+          <ScalarProperty Name="HORA_CHECKIN" ColumnName="HORA_CHECKIN" />
+          <ScalarProperty Name="HORA_CHECKOUT" ColumnName="HORA_CHECKOUT" />
+          <ScalarProperty Name="USUARIO_DNI" ColumnName="USUARIO_DNI" />
+          <ScalarProperty Name="DEPARTAMENTO_ID_DEPARTAMENTO" ColumnName="DEPARTAMENTO_ID_DEPARTAMENTO" />
+          <ScalarProperty Name="PRECIO_TOTAL" ColumnName="PRECIO_TOTAL" />
+          <ScalarProperty Name="TOTAL_PAGADO" ColumnName="TOTAL_PAGADO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROL">
+      <EntityTypeMapping TypeName="Modelo_TR.ROL">
+        <MappingFragment StoreEntitySet="ROL">
+          <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICIO_EXTRA">
+      <EntityTypeMapping TypeName="Modelo_TR.SERVICIO_EXTRA">
+        <MappingFragment StoreEntitySet="SERVICIO_EXTRA">
+          <ScalarProperty Name="ID_SERVICIO_EXTRA" ColumnName="ID_SERVICIO_EXTRA" />
+          <ScalarProperty Name="NOMBRE_SERVICIO_EX" ColumnName="NOMBRE_SERVICIO_EX" />
+          <ScalarProperty Name="PRECIO_ACTUAL" ColumnName="PRECIO_ACTUAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICIO_TOURS">
+      <EntityTypeMapping TypeName="Modelo_TR.SERVICIO_TOURS">
+        <MappingFragment StoreEntitySet="SERVICIO_TOURS">
+          <ScalarProperty Name="ID_SERVICIO_TOURS" ColumnName="ID_SERVICIO_TOURS" />
+          <ScalarProperty Name="HORA_LLEGADA" ColumnName="HORA_LLEGADA" />
+          <ScalarProperty Name="HORA_SALIDA" ColumnName="HORA_SALIDA" />
+          <ScalarProperty Name="PRECIO_ACTUAL" ColumnName="PRECIO_ACTUAL" />
+          <ScalarProperty Name="ZONA_TOUR_ID_ZONAT" ColumnName="ZONA_TOUR_ID_ZONAT" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="DISPONIBLE" ColumnName="DISPONIBLE" />
+          <ScalarProperty Name="MES_TEMP_DESDE" ColumnName="MES_TEMP_DESDE" />
+          <ScalarProperty Name="MES_TEMP_HASTA" ColumnName="MES_TEMP_HASTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICIO_TRANSPORTE">
+      <EntityTypeMapping TypeName="Modelo_TR.SERVICIO_TRANSPORTE">
+        <MappingFragment StoreEntitySet="SERVICIO_TRANSPORTE">
+          <ScalarProperty Name="ID_TRANSPORTE" ColumnName="ID_TRANSPORTE" />
+          <ScalarProperty Name="LUGAR" ColumnName="LUGAR" />
+          <ScalarProperty Name="HORA_COMIENZO" ColumnName="HORA_COMIENZO" />
+          <ScalarProperty Name="HORA_TERMINO" ColumnName="HORA_TERMINO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="PRECIO_ACTUAL" ColumnName="PRECIO_ACTUAL" />
+          <ScalarProperty Name="CONDUCTOR_DNI" ColumnName="CONDUCTOR_DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="Modelo_TR.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="CORREO_ELECTRONICO" ColumnName="CORREO_ELECTRONICO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="CONTRASENIA" ColumnName="CONTRASENIA" />
+          <ScalarProperty Name="ACTIVADO" ColumnName="ACTIVADO" />
+          <ScalarProperty Name="ROL_ID_ROL" ColumnName="ROL_ID_ROL" />
+          <ScalarProperty Name="EXTRANJERO" ColumnName="EXTRANJERO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VEHICULO">
+      <EntityTypeMapping TypeName="Modelo_TR.VEHICULO">
+        <MappingFragment StoreEntitySet="VEHICULO">
+          <ScalarProperty Name="PATENTE" ColumnName="PATENTE" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="CONDUCTOR_DNI" ColumnName="CONDUCTOR_DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZONA_TOUR">
+      <EntityTypeMapping TypeName="Modelo_TR.ZONA_TOUR">
+        <MappingFragment StoreEntitySet="ZONA_TOUR">
+          <ScalarProperty Name="ID_ZONAT" ColumnName="ID_ZONAT" />
+          <ScalarProperty Name="NOMBRE_ZONA" ColumnName="NOMBRE_ZONA" />
+          <ScalarProperty Name="CIUDAD_ID_CIUDAD" ColumnName="CIUDAD_ID_CIUDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHECKLIST">
+      <EntityTypeMapping TypeName="Modelo_TR.CHECKLIST">
+        <MappingFragment StoreEntitySet="CHECKLIST">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DESCRIPCIÓN" ColumnName="DESCRIPCIÓN" />
+          <ScalarProperty Name="RESERVA_ID_RESERVA" ColumnName="RESERVA_ID_RESERVA" />
+          <ScalarProperty Name="INVENTARIO_ID_INVENTARIO" ColumnName="INVENTARIO_ID_INVENTARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESERVA_SERVICIO">
+      <EntityTypeMapping TypeName="Modelo_TR.RESERVA_SERVICIO">
+        <MappingFragment StoreEntitySet="RESERVA_SERVICIO">
+          <ScalarProperty Name="PRECIO_CONTRATADO" ColumnName="PRECIO_CONTRATADO" />
+          <ScalarProperty Name="RESERVA_ID_RESERVA" ColumnName="RESERVA_ID_RESERVA" />
+          <ScalarProperty Name="SERVICIO_EXTRA_ID" ColumnName="SERVICIO_EXTRA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESERVA_TOUR">
+      <EntityTypeMapping TypeName="Modelo_TR.RESERVA_TOUR">
+        <MappingFragment StoreEntitySet="RESERVA_TOUR">
+          <ScalarProperty Name="PRECIO_CONTRATADO" ColumnName="PRECIO_CONTRATADO" />
+          <ScalarProperty Name="RESERVA_ID_RESERVA" ColumnName="RESERVA_ID_RESERVA" />
+          <ScalarProperty Name="SERVICIO_TOURS_ID" ColumnName="SERVICIO_TOURS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESERVA_TRANSPORTE">
+      <EntityTypeMapping TypeName="Modelo_TR.RESERVA_TRANSPORTE">
+        <MappingFragment StoreEntitySet="RESERVA_TRANSPORTE">
+          <ScalarProperty Name="PRECIO_CONTRATADO" ColumnName="PRECIO_CONTRATADO" />
+          <ScalarProperty Name="RESERVA_ID_RESERVA" ColumnName="RESERVA_ID_RESERVA" />
+          <ScalarProperty Name="SERVICIO_TRANSPORTE_ID" ColumnName="SERVICIO_TRANSPORTE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="RESERVA_ACOMP" TypeName="Modelo_TR.RESERVA_ACOMP" StoreEntitySet="RESERVA_ACOMP">
+      <EndProperty Name="ACOMPAÑANTE">
+        <ScalarProperty Name="DNI_ACOMPANANTE" ColumnName="ACOMPAÑANTE_DNI_ACOMPANANTE" />
+      </EndProperty>
+      <EndProperty Name="RESERVA">
+        <ScalarProperty Name="ID_RESERVA" ColumnName="RESERVA_ID_RESERVA" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

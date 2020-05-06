@@ -1,0 +1,10 @@
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\OracleConnector\bin\Debug\OracleConnector.dll.config
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\OracleConnector\bin\Debug\OracleConnector.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\OracleConnector\bin\Debug\OracleConnector.pdb
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\OracleConnector\bin\Debug\EntityFramework.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\OracleConnector\bin\Debug\EntityFramework.xml
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\OracleConnector\obj\Debug\OracleConnector.csprojAssemblyReference.cache
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\OracleConnector\obj\Debug\OracleConnector.csproj.CoreCompileInputs.cache
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\OracleConnector\obj\Debug\OracleConnector.csproj.CopyComplete
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\OracleConnector\obj\Debug\OracleConnector.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\OracleConnector\obj\Debug\OracleConnector.pdb

@@ -1,0 +1,12 @@
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\bin\Release\ConectorOracle.dll.config
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\bin\Release\ConectorOracle.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\bin\Release\ConectorOracle.pdb
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\bin\Release\EntityFramework.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\bin\Release\EntityFramework.xml
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\obj\Release\ConectorOracle.csprojAssemblyReference.cache
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\obj\Release\ConectorOracle.csproj.CoreCompileInputs.cache
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\obj\Release\ConectorOracle.csproj.CopyComplete
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\obj\Release\ConectorOracle.dll
+C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\obj\Release\ConectorOracle.pdb

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="TREntities-Web.config Connection String" description="TREntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/BDArriendos.csdl|res://*/BDArriendos.ssdl|res://*/BDArriendos.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=localhost:1521/xe;PASSWORD=asdasdasd;USER ID=DEVELOPMENT&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Gerald\\source\\repos\\SLN_WCFTurismoREAL\\WCFTurismoREAL\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TREntities']/@connectionString" />
+  </parameter>
+  <parameter name="ATEntities-Web.config Connection String" description="ATEntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/BDArriendos.csdl|res://*/BDArriendos.ssdl|res://*/BDArriendos.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=localhost:1521/xe;PASSWORD=asdasdasd;USER ID=DEVELOPMENT&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Gerald\\source\\repos\\SLN_WCFTurismoREAL\\WCFTurismoREAL\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ATEntities']/@connectionString" />
+  </parameter>
+</parameters>

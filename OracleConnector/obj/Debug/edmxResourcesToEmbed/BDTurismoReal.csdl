@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Modelo_TR" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ACOMPAÑANTE">
+    <Key>
+      <PropertyRef Name="DNI_ACOMPANANTE" />
+    </Key>
+    <Property Name="DNI_ACOMPANANTE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE_COMPLETO" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EXTRANJERO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CORREO" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFONO" Type="Int32" />
+    <NavigationProperty Name="RESERVA" Relationship="Self.RESERVA_ACOMP" FromRole="ACOMPAÑANTE" ToRole="RESERVA" />
+  </EntityType>
+  <EntityType Name="CIUDAD">
+    <Key>
+      <PropertyRef Name="ID_CIUDAD" />
+    </Key>
+    <Property Name="ID_CIUDAD" Type="Int16" Nullable="false" />
+    <Property Name="NOMBRE_CIUDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="N_REGION" Type="String" MaxLength="505" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="DEPARTAMENTO" Relationship="Self.DEPARTAMENTO_CIUDAD_FK" FromRole="CIUDAD" ToRole="DEPARTAMENTO" />
+    <NavigationProperty Name="ZONA_TOUR" Relationship="Self.ZONA_TOUR_CIUDAD_FK" FromRole="CIUDAD" ToRole="ZONA_TOUR" />
+  </EntityType>
+  <EntityType Name="CONDUCTOR">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EXTRANJERO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="SERVICIO_TRANSPORTE" Relationship="Self.SERVICIO_CONDUCTOR_FK" FromRole="CONDUCTOR" ToRole="SERVICIO_TRANSPORTE" />
+    <NavigationProperty Name="VEHICULO" Relationship="Self.VEHICULO_CONDUCTOR_FK" FromRole="CONDUCTOR" ToRole="VEHICULO" />
+  </EntityType>
+  <EntityType Name="DEPARTAMENTO">
+    <Key>
+      <PropertyRef Name="ID_DEPARTAMENTO" />
+    </Key>
+    <Property Name="ID_DEPARTAMENTO" Type="Int16" Nullable="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CANT_BANIOS" Type="Int16" Nullable="false" />
+    <Property Name="CANT_DORMITORIOS" Type="Int16" Nullable="false" />
+    <Property Name="PRECIO_DIARIO" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ACTIVADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CONDICIONES_USO" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="PORCENTAJE" Type="Int16" Nullable="false" />
+    <Property Name="CIUDAD_ID_CIUDAD" Type="Int16" Nullable="false" />
+    <Property Name="INTERNET" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CALEFACCION" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CIUDAD" Relationship="Self.DEPARTAMENTO_CIUDAD_FK" FromRole="DEPARTAMENTO" ToRole="CIUDAD" />
+    <NavigationProperty Name="FOTO_DEPT" Relationship="Self.FOTO_DEPT_DEPARTAMENTO_FK" FromRole="DEPARTAMENTO" ToRole="FOTO_DEPT" />
+    <NavigationProperty Name="INVENTARIO" Relationship="Self.INVENTARIO_DEPARTAMENTO_FK" FromRole="DEPARTAMENTO" ToRole="INVENTARIO" />
+    <NavigationProperty Name="MANTENCION" Relationship="Self.MANTENCION_DEPARTAMENTO_FK" FromRole="DEPARTAMENTO" ToRole="MANTENCION" />
+    <NavigationProperty Name="RESERVA" Relationship="Self.RESERVA_DEPARTAMENTO_FK" FromRole="DEPARTAMENTO" ToRole="RESERVA" />
+  </EntityType>
+  <EntityType Name="FOTO_DEPT">
+    <Key>
+      <PropertyRef Name="ID_FOTO" />
+    </Key>
+    <Property Name="ID_FOTO" Type="Int16" Nullable="false" />
+    <Property Name="FOTO" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPARTAMENTO_ID_DEPARTAMENTO" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="DEPARTAMENTO" Relationship="Self.FOTO_DEPT_DEPARTAMENTO_FK" FromRole="FOTO_DEPT" ToRole="DEPARTAMENTO" />
+  </EntityType>
+  <EntityType Name="INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_INVENTARIO" />
+    </Key>
+    <Property Name="ID_INVENTARIO" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRECIO" Type="Int32" Nullable="false" />
+    <Property Name="IMPORTANTE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ESTADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPARTAMENTO_ID_DEPARTAMENTO" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="DEPARTAMENTO" Relationship="Self.INVENTARIO_DEPARTAMENTO_FK" FromRole="INVENTARIO" ToRole="DEPARTAMENTO" />
+    <NavigationProperty Name="CHECKLIST" Relationship="Self.CHECKLIST_INVENTARIO_FK" FromRole="INVENTARIO" ToRole="CHECKLIST" />
+  </EntityType>
+  <EntityType Name="MANTENCION">
+    <Key>
+      <PropertyRef Name="ID_MANTENCION" />
+    </Key>
+    <Property Name="ID_MANTENCION" Type="Int16" Nullable="false" />
+    <Property Name="FECHA_INICIO" Type="DateTime" Nullable="false" />
+    <Property Name="FECHA_TERMINO" Type="DateTime" Nullable="false" />
+    <Property Name="COSTO" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPARTAMENTO_ID_DEPARTAMENTO" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="DEPARTAMENTO" Relationship="Self.MANTENCION_DEPARTAMENTO_FK" FromRole="MANTENCION" ToRole="DEPARTAMENTO" />
+  </EntityType>
+  <EntityType Name="MULTA">
+    <Key>
+      <PropertyRef Name="ID_MULTA" />
+    </Key>
+    <Property Name="ID_MULTA" Type="Int32" Nullable="false" />
+    <Property Name="TOTAL_MULTA" Type="Int32" Nullable="false" />
+    <Property Name="TOTAL_PAGADO" Type="Int32" Nullable="false" />
+    <Property Name="PAGADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RESERVA_ID_RESERVA" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="RESERVA" Relationship="Self.MULTA_RESERVA_FK" FromRole="MULTA" ToRole="RESERVA" />
+  </EntityType>
+  <EntityType Name="RESERVA">
+    <Key>
+      <PropertyRef Name="ID_RESERVA" />
+    </Key>
+    <Property Name="ID_RESERVA" Type="Int16" Nullable="false" />
+    <Property Name="FECHA_CHECKIN" Type="DateTime" Nullable="false" />
+    <Property Name="FECHA_CHECKOUT" Type="DateTime" Nullable="false" />
+    <Property Name="HORA_CHECKIN" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HORA_CHECKOUT" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="USUARIO_DNI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPARTAMENTO_ID_DEPARTAMENTO" Type="Int16" Nullable="false" />
+    <Property Name="PRECIO_TOTAL" Type="Int32" Nullable="false" />
+    <Property Name="TOTAL_PAGADO" Type="Int32" Nullable="false" />
+    <Property Name="ESTADO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="DEPARTAMENTO" Relationship="Self.RESERVA_DEPARTAMENTO_FK" FromRole="RESERVA" ToRole="DEPARTAMENTO" />
+    <NavigationProperty Name="MULTA" Relationship="Self.MULTA_RESERVA_FK" FromRole="RESERVA" ToRole="MULTA" />
+    <NavigationProperty Name="CHECKLIST" Relationship="Self.CHECKLIST_RESERVA_FK" FromRole="RESERVA" ToRole="CHECKLIST" />
+    <NavigationProperty Name="RESERVA_SERVICIO" Relationship="Self.RESERVA_SERVICIO_RESERVA_FK" FromRole="RESERVA" ToRole="RESERVA_SERVICIO" />
+    <NavigationProperty Name="RESERVA_TOUR" Relationship="Self.RESERVA_TOUR_RESERVA_FK" FromRole="RESERVA" ToRole="RESERVA_TOUR" />
+    <NavigationProperty Name="RESERVA_TRANSPORTE" Relationship="Self.RESERVA_TRANSPORTE_RESERVA_FK" FromRole="RESERVA" ToRole="RESERVA_TRANSPORTE" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.RESERVA_USUARIO_FK" FromRole="RESERVA" ToRole="USUARIO" />
+    <NavigationProperty Name="ACOMPAÑANTE" Relationship="Self.RESERVA_ACOMP" FromRole="RESERVA" ToRole="ACOMPAÑANTE" />
+  </EntityType>
+  <EntityType Name="ROL">
+    <Key>
+      <PropertyRef Name="ID_ROL" />
+    </Key>
+    <Property Name="ID_ROL" Type="Int16" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.USUARIO_ROL_FK" FromRole="ROL" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="SERVICIO_EXTRA">
+    <Key>
+      <PropertyRef Name="ID_SERVICIO_EXTRA" />
+    </Key>
+    <Property Name="ID_SERVICIO_EXTRA" Type="Int16" Nullable="false" />
+    <Property Name="NOMBRE_SERVICIO_EX" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRECIO_ACTUAL" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="RESERVA_SERVICIO" Relationship="Self.RESERVA_SERV_EXTRA_FK" FromRole="SERVICIO_EXTRA" ToRole="RESERVA_SERVICIO" />
+  </EntityType>
+  <EntityType Name="SERVICIO_TOURS">
+    <Key>
+      <PropertyRef Name="ID_SERVICIO_TOURS" />
+    </Key>
+    <Property Name="ID_SERVICIO_TOURS" Type="Int16" Nullable="false" />
+    <Property Name="HORA_LLEGADA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HORA_SALIDA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRECIO_ACTUAL" Type="Int32" Nullable="false" />
+    <Property Name="ZONA_TOUR_ID_ZONAT" Type="Int16" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" />
+    <Property Name="DISPONIBLE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MES_TEMP_DESDE" Type="Int16" />
+    <Property Name="MES_TEMP_HASTA" Type="Int16" />
+    <NavigationProperty Name="RESERVA_TOUR" Relationship="Self.RESERVA_TOUR_SERVICIO_TOURS_FK" FromRole="SERVICIO_TOURS" ToRole="RESERVA_TOUR" />
+    <NavigationProperty Name="ZONA_TOUR" Relationship="Self.SERVICIO_TOURS_ZONA_TOUR_FK" FromRole="SERVICIO_TOURS" ToRole="ZONA_TOUR" />
+  </EntityType>
+  <EntityType Name="SERVICIO_TRANSPORTE">
+    <Key>
+      <PropertyRef Name="ID_TRANSPORTE" />
+    </Key>
+    <Property Name="ID_TRANSPORTE" Type="Int16" Nullable="false" />
+    <Property Name="LUGAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HORA_COMIENZO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HORA_TERMINO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" />
+    <Property Name="PRECIO_ACTUAL" Type="Int32" Nullable="false" />
+    <Property Name="CONDUCTOR_DNI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CONDUCTOR" Relationship="Self.SERVICIO_CONDUCTOR_FK" FromRole="SERVICIO_TRANSPORTE" ToRole="CONDUCTOR" />
+    <NavigationProperty Name="RESERVA_TRANSPORTE" Relationship="Self.RESERVA_TRANSPORTE_FK" FromRole="SERVICIO_TRANSPORTE" ToRole="RESERVA_TRANSPORTE" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="APELLIDOS" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CORREO_ELECTRONICO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TELEFONO" Type="Int32" Nullable="false" />
+    <Property Name="CONTRASENIA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ACTIVADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ROL_ID_ROL" Type="Int16" Nullable="false" />
+    <Property Name="EXTRANJERO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="RESERVA" Relationship="Self.RESERVA_USUARIO_FK" FromRole="USUARIO" ToRole="RESERVA" />
+    <NavigationProperty Name="ROL" Relationship="Self.USUARIO_ROL_FK" FromRole="USUARIO" ToRole="ROL" />
+  </EntityType>
+  <EntityType Name="VEHICULO">
+    <Key>
+      <PropertyRef Name="PATENTE" />
+    </Key>
+    <Property Name="PATENTE" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COLOR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CONDUCTOR_DNI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CONDUCTOR" Relationship="Self.VEHICULO_CONDUCTOR_FK" FromRole="VEHICULO" ToRole="CONDUCTOR" />
+  </EntityType>
+  <EntityType Name="ZONA_TOUR">
+    <Key>
+      <PropertyRef Name="ID_ZONAT" />
+    </Key>
+    <Property Name="ID_ZONAT" Type="Int16" Nullable="false" />
+    <Property Name="NOMBRE_ZONA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CIUDAD_ID_CIUDAD" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="CIUDAD" Relationship="Self.ZONA_TOUR_CIUDAD_FK" FromRole="ZONA_TOUR" ToRole="CIUDAD" />
+    <NavigationProperty Name="SERVICIO_TOURS" Relationship="Self.SERVICIO_TOURS_ZONA_TOUR_FK" FromRole="ZONA_TOUR" ToRole="SERVICIO_TOURS" />
+  </EntityType>
+  <EntityType Name="CHECKLIST">
+    <Key>
+      <PropertyRef Name="ESTADO" />
+      <PropertyRef Name="DESCRIPCIÓN" />
+      <PropertyRef Name="RESERVA_ID_RESERVA" />
+      <PropertyRef Name="INVENTARIO_ID_INVENTARIO" />
+    </Key>
+    <Property Name="ESTADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPCIÓN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RESERVA_ID_RESERVA" Type="Int16" Nullable="false" />
+    <Property Name="INVENTARIO_ID_INVENTARIO" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="INVENTARIO" Relationship="Self.CHECKLIST_INVENTARIO_FK" FromRole="CHECKLIST" ToRole="INVENTARIO" />
+    <NavigationProperty Name="RESERVA" Relationship="Self.CHECKLIST_RESERVA_FK" FromRole="CHECKLIST" ToRole="RESERVA" />
+  </EntityType>
+  <EntityType Name="RESERVA_SERVICIO">
+    <Key>
+      <PropertyRef Name="PRECIO_CONTRATADO" />
+      <PropertyRef Name="RESERVA_ID_RESERVA" />
+      <PropertyRef Name="SERVICIO_EXTRA_ID" />
+    </Key>
+    <Property Name="PRECIO_CONTRATADO" Type="Int32" Nullable="false" />
+    <Property Name="RESERVA_ID_RESERVA" Type="Int16" Nullable="false" />
+    <Property Name="SERVICIO_EXTRA_ID" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="RESERVA" Relationship="Self.RESERVA_SERVICIO_RESERVA_FK" FromRole="RESERVA_SERVICIO" ToRole="RESERVA" />
+    <NavigationProperty Name="SERVICIO_EXTRA" Relationship="Self.RESERVA_SERV_EXTRA_FK" FromRole="RESERVA_SERVICIO" ToRole="SERVICIO_EXTRA" />
+  </EntityType>
+  <EntityType Name="RESERVA_TOUR">
+    <Key>
+      <PropertyRef Name="PRECIO_CONTRATADO" />
+      <PropertyRef Name="RESERVA_ID_RESERVA" />
+      <PropertyRef Name="SERVICIO_TOURS_ID" />
+    </Key>
+    <Property Name="PRECIO_CONTRATADO" Type="Int32" Nullable="false" />
+    <Property Name="RESERVA_ID_RESERVA" Type="Int16" Nullable="false" />
+    <Property Name="SERVICIO_TOURS_ID" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="RESERVA" Relationship="Self.RESERVA_TOUR_RESERVA_FK" FromRole="RESERVA_TOUR" ToRole="RESERVA" />
+    <NavigationProperty Name="SERVICIO_TOURS" Relationship="Self.RESERVA_TOUR_SERVICIO_TOURS_FK" FromRole="RESERVA_TOUR" ToRole="SERVICIO_TOURS" />
+  </EntityType>
+  <EntityType Name="RESERVA_TRANSPORTE">
+    <Key>
+      <PropertyRef Name="PRECIO_CONTRATADO" />
+      <PropertyRef Name="RESERVA_ID_RESERVA" />
+      <PropertyRef Name="SERVICIO_TRANSPORTE_ID" />
+    </Key>
+    <Property Name="PRECIO_CONTRATADO" Type="Int32" Nullable="false" />
+    <Property Name="RESERVA_ID_RESERVA" Type="Int16" Nullable="false" />
+    <Property Name="SERVICIO_TRANSPORTE_ID" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="RESERVA" Relationship="Self.RESERVA_TRANSPORTE_RESERVA_FK" FromRole="RESERVA_TRANSPORTE" ToRole="RESERVA" />
+    <NavigationProperty Name="SERVICIO_TRANSPORTE" Relationship="Self.RESERVA_TRANSPORTE_FK" FromRole="RESERVA_TRANSPORTE" ToRole="SERVICIO_TRANSPORTE" />
+  </EntityType>
+  <Association Name="DEPARTAMENTO_CIUDAD_FK">
+    <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="1" />
+    <End Role="DEPARTAMENTO" Type="Self.DEPARTAMENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDAD">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Principal>
+      <Dependent Role="DEPARTAMENTO">
+        <PropertyRef Name="CIUDAD_ID_CIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ZONA_TOUR_CIUDAD_FK">
+    <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="1" />
+    <End Role="ZONA_TOUR" Type="Self.ZONA_TOUR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDAD">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Principal>
+      <Dependent Role="ZONA_TOUR">
+        <PropertyRef Name="CIUDAD_ID_CIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SERVICIO_CONDUCTOR_FK">
+    <End Role="CONDUCTOR" Type="Self.CONDUCTOR" Multiplicity="1" />
+    <End Role="SERVICIO_TRANSPORTE" Type="Self.SERVICIO_TRANSPORTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONDUCTOR">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="SERVICIO_TRANSPORTE">
+        <PropertyRef Name="CONDUCTOR_DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VEHICULO_CONDUCTOR_FK">
+    <End Role="CONDUCTOR" Type="Self.CONDUCTOR" Multiplicity="1" />
+    <End Role="VEHICULO" Type="Self.VEHICULO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONDUCTOR">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="VEHICULO">
+        <PropertyRef Name="CONDUCTOR_DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FOTO_DEPT_DEPARTAMENTO_FK">
+    <End Role="DEPARTAMENTO" Type="Self.DEPARTAMENTO" Multiplicity="1" />
+    <End Role="FOTO_DEPT" Type="Self.FOTO_DEPT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTAMENTO">
+        <PropertyRef Name="ID_DEPARTAMENTO" />
+      </Principal>
+      <Dependent Role="FOTO_DEPT">
+        <PropertyRef Name="DEPARTAMENTO_ID_DEPARTAMENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INVENTARIO_DEPARTAMENTO_FK">
+    <End Role="DEPARTAMENTO" Type="Self.DEPARTAMENTO" Multiplicity="1" />
+    <End Role="INVENTARIO" Type="Self.INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTAMENTO">
+        <PropertyRef Name="ID_DEPARTAMENTO" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="DEPARTAMENTO_ID_DEPARTAMENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MANTENCION_DEPARTAMENTO_FK">
+    <End Role="DEPARTAMENTO" Type="Self.DEPARTAMENTO" Multiplicity="1" />
+    <End Role="MANTENCION" Type="Self.MANTENCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTAMENTO">
+        <PropertyRef Name="ID_DEPARTAMENTO" />
+      </Principal>
+      <Dependent Role="MANTENCION">
+        <PropertyRef Name="DEPARTAMENTO_ID_DEPARTAMENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RESERVA_DEPARTAMENTO_FK">
+    <End Role="DEPARTAMENTO" Type="Self.DEPARTAMENTO" Multiplicity="1" />
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTAMENTO">
+        <PropertyRef Name="ID_DEPARTAMENTO" />
+      </Principal>
+      <Dependent Role="RESERVA">
+        <PropertyRef Name="DEPARTAMENTO_ID_DEPARTAMENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CHECKLIST_INVENTARIO_FK">
+    <End Role="INVENTARIO" Type="Self.INVENTARIO" Multiplicity="1" />
+    <End Role="CHECKLIST" Type="Self.CHECKLIST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTARIO">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Principal>
+      <Dependent Role="CHECKLIST">
+        <PropertyRef Name="INVENTARIO_ID_INVENTARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MULTA_RESERVA_FK">
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="1" />
+    <End Role="MULTA" Type="Self.MULTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESERVA">
+        <PropertyRef Name="ID_RESERVA" />
+      </Principal>
+      <Dependent Role="MULTA">
+        <PropertyRef Name="RESERVA_ID_RESERVA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CHECKLIST_RESERVA_FK">
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="1" />
+    <End Role="CHECKLIST" Type="Self.CHECKLIST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESERVA">
+        <PropertyRef Name="ID_RESERVA" />
+      </Principal>
+      <Dependent Role="CHECKLIST">
+        <PropertyRef Name="RESERVA_ID_RESERVA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RESERVA_SERVICIO_RESERVA_FK">
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="1" />
+    <End Role="RESERVA_SERVICIO" Type="Self.RESERVA_SERVICIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESERVA">
+        <PropertyRef Name="ID_RESERVA" />
+      </Principal>
+      <Dependent Role="RESERVA_SERVICIO">
+        <PropertyRef Name="RESERVA_ID_RESERVA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RESERVA_TOUR_RESERVA_FK">
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="1" />
+    <End Role="RESERVA_TOUR" Type="Self.RESERVA_TOUR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESERVA">
+        <PropertyRef Name="ID_RESERVA" />
+      </Principal>
+      <Dependent Role="RESERVA_TOUR">
+        <PropertyRef Name="RESERVA_ID_RESERVA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RESERVA_TRANSPORTE_RESERVA_FK">
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="1" />
+    <End Role="RESERVA_TRANSPORTE" Type="Self.RESERVA_TRANSPORTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESERVA">
+        <PropertyRef Name="ID_RESERVA" />
+      </Principal>
+      <Dependent Role="RESERVA_TRANSPORTE">
+        <PropertyRef Name="RESERVA_ID_RESERVA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RESERVA_USUARIO_FK">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="RESERVA">
+        <PropertyRef Name="USUARIO_DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="USUARIO_ROL_FK">
+    <End Role="ROL" Type="Self.ROL" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROL">
+        <PropertyRef Name="ID_ROL" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="ROL_ID_ROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RESERVA_SERV_EXTRA_FK">
+    <End Role="SERVICIO_EXTRA" Type="Self.SERVICIO_EXTRA" Multiplicity="1" />
+    <End Role="RESERVA_SERVICIO" Type="Self.RESERVA_SERVICIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVICIO_EXTRA">
+        <PropertyRef Name="ID_SERVICIO_EXTRA" />
+      </Principal>
+      <Dependent Role="RESERVA_SERVICIO">
+        <PropertyRef Name="SERVICIO_EXTRA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RESERVA_TOUR_SERVICIO_TOURS_FK">
+    <End Role="SERVICIO_TOURS" Type="Self.SERVICIO_TOURS" Multiplicity="1" />
+    <End Role="RESERVA_TOUR" Type="Self.RESERVA_TOUR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVICIO_TOURS">
+        <PropertyRef Name="ID_SERVICIO_TOURS" />
+      </Principal>
+      <Dependent Role="RESERVA_TOUR">
+        <PropertyRef Name="SERVICIO_TOURS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SERVICIO_TOURS_ZONA_TOUR_FK">
+    <End Role="ZONA_TOUR" Type="Self.ZONA_TOUR" Multiplicity="1" />
+    <End Role="SERVICIO_TOURS" Type="Self.SERVICIO_TOURS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZONA_TOUR">
+        <PropertyRef Name="ID_ZONAT" />
+      </Principal>
+      <Dependent Role="SERVICIO_TOURS">
+        <PropertyRef Name="ZONA_TOUR_ID_ZONAT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RESERVA_TRANSPORTE_FK">
+    <End Role="SERVICIO_TRANSPORTE" Type="Self.SERVICIO_TRANSPORTE" Multiplicity="1" />
+    <End Role="RESERVA_TRANSPORTE" Type="Self.RESERVA_TRANSPORTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVICIO_TRANSPORTE">
+        <PropertyRef Name="ID_TRANSPORTE" />
+      </Principal>
+      <Dependent Role="RESERVA_TRANSPORTE">
+        <PropertyRef Name="SERVICIO_TRANSPORTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RESERVA_ACOMP">
+    <End Role="ACOMPAÑANTE" Type="Self.ACOMPAÑANTE" Multiplicity="*" />
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="BD_TurismoReal" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ACOMPAÑANTE" EntityType="Self.ACOMPAÑANTE" />
+    <EntitySet Name="CIUDAD" EntityType="Self.CIUDAD" />
+    <EntitySet Name="CONDUCTOR" EntityType="Self.CONDUCTOR" />
+    <EntitySet Name="DEPARTAMENTO" EntityType="Self.DEPARTAMENTO" />
+    <EntitySet Name="FOTO_DEPT" EntityType="Self.FOTO_DEPT" />
+    <EntitySet Name="INVENTARIO" EntityType="Self.INVENTARIO" />
+    <EntitySet Name="MANTENCION" EntityType="Self.MANTENCION" />
+    <EntitySet Name="MULTA" EntityType="Self.MULTA" />
+    <EntitySet Name="RESERVA" EntityType="Self.RESERVA" />
+    <EntitySet Name="ROL" EntityType="Self.ROL" />
+    <EntitySet Name="SERVICIO_EXTRA" EntityType="Self.SERVICIO_EXTRA" />
+    <EntitySet Name="SERVICIO_TOURS" EntityType="Self.SERVICIO_TOURS" />
+    <EntitySet Name="SERVICIO_TRANSPORTE" EntityType="Self.SERVICIO_TRANSPORTE" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+    <EntitySet Name="VEHICULO" EntityType="Self.VEHICULO" />
+    <EntitySet Name="ZONA_TOUR" EntityType="Self.ZONA_TOUR" />
+    <EntitySet Name="CHECKLIST" EntityType="Self.CHECKLIST" />
+    <EntitySet Name="RESERVA_SERVICIO" EntityType="Self.RESERVA_SERVICIO" />
+    <EntitySet Name="RESERVA_TOUR" EntityType="Self.RESERVA_TOUR" />
+    <EntitySet Name="RESERVA_TRANSPORTE" EntityType="Self.RESERVA_TRANSPORTE" />
+    <AssociationSet Name="DEPARTAMENTO_CIUDAD_FK" Association="Self.DEPARTAMENTO_CIUDAD_FK">
+      <End Role="CIUDAD" EntitySet="CIUDAD" />
+      <End Role="DEPARTAMENTO" EntitySet="DEPARTAMENTO" />
+    </AssociationSet>
+    <AssociationSet Name="ZONA_TOUR_CIUDAD_FK" Association="Self.ZONA_TOUR_CIUDAD_FK">
+      <End Role="CIUDAD" EntitySet="CIUDAD" />
+      <End Role="ZONA_TOUR" EntitySet="ZONA_TOUR" />
+    </AssociationSet>
+    <AssociationSet Name="SERVICIO_CONDUCTOR_FK" Association="Self.SERVICIO_CONDUCTOR_FK">
+      <End Role="CONDUCTOR" EntitySet="CONDUCTOR" />
+      <End Role="SERVICIO_TRANSPORTE" EntitySet="SERVICIO_TRANSPORTE" />
+    </AssociationSet>
+    <AssociationSet Name="VEHICULO_CONDUCTOR_FK" Association="Self.VEHICULO_CONDUCTOR_FK">
+      <End Role="CONDUCTOR" EntitySet="CONDUCTOR" />
+      <End Role="VEHICULO" EntitySet="VEHICULO" />
+    </AssociationSet>
+    <AssociationSet Name="FOTO_DEPT_DEPARTAMENTO_FK" Association="Self.FOTO_DEPT_DEPARTAMENTO_FK">
+      <End Role="DEPARTAMENTO" EntitySet="DEPARTAMENTO" />
+      <End Role="FOTO_DEPT" EntitySet="FOTO_DEPT" />
+    </AssociationSet>
+    <AssociationSet Name="INVENTARIO_DEPARTAMENTO_FK" Association="Self.INVENTARIO_DEPARTAMENTO_FK">
+      <End Role="DEPARTAMENTO" EntitySet="DEPARTAMENTO" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="MANTENCION_DEPARTAMENTO_FK" Association="Self.MANTENCION_DEPARTAMENTO_FK">
+      <End Role="DEPARTAMENTO" EntitySet="DEPARTAMENTO" />
+      <End Role="MANTENCION" EntitySet="MANTENCION" />
+    </AssociationSet>
+    <AssociationSet Name="RESERVA_DEPARTAMENTO_FK" Association="Self.RESERVA_DEPARTAMENTO_FK">
+      <End Role="DEPARTAMENTO" EntitySet="DEPARTAMENTO" />
+      <End Role="RESERVA" EntitySet="RESERVA" />
+    </AssociationSet>
+    <AssociationSet Name="CHECKLIST_INVENTARIO_FK" Association="Self.CHECKLIST_INVENTARIO_FK">
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+      <End Role="CHECKLIST" EntitySet="CHECKLIST" />
+    </AssociationSet>
+    <AssociationSet Name="MULTA_RESERVA_FK" Association="Self.MULTA_RESERVA_FK">
+      <End Role="RESERVA" EntitySet="RESERVA" />
+      <End Role="MULTA" EntitySet="MULTA" />
+    </AssociationSet>
+    <AssociationSet Name="CHECKLIST_RESERVA_FK" Association="Self.CHECKLIST_RESERVA_FK">
+      <End Role="RESERVA" EntitySet="RESERVA" />
+      <End Role="CHECKLIST" EntitySet="CHECKLIST" />
+    </AssociationSet>
+    <AssociationSet Name="RESERVA_SERVICIO_RESERVA_FK" Association="Self.RESERVA_SERVICIO_RESERVA_FK">
+      <End Role="RESERVA" EntitySet="RESERVA" />
+      <End Role="RESERVA_SERVICIO" EntitySet="RESERVA_SERVICIO" />
+    </AssociationSet>
+    <AssociationSet Name="RESERVA_TOUR_RESERVA_FK" Association="Self.RESERVA_TOUR_RESERVA_FK">
+      <End Role="RESERVA" EntitySet="RESERVA" />
+      <End Role="RESERVA_TOUR" EntitySet="RESERVA_TOUR" />
+    </AssociationSet>
+    <AssociationSet Name="RESERVA_TRANSPORTE_RESERVA_FK" Association="Self.RESERVA_TRANSPORTE_RESERVA_FK">
+      <End Role="RESERVA" EntitySet="RESERVA" />
+      <End Role="RESERVA_TRANSPORTE" EntitySet="RESERVA_TRANSPORTE" />
+    </AssociationSet>
+    <AssociationSet Name="RESERVA_USUARIO_FK" Association="Self.RESERVA_USUARIO_FK">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="RESERVA" EntitySet="RESERVA" />
+    </AssociationSet>
+    <AssociationSet Name="USUARIO_ROL_FK" Association="Self.USUARIO_ROL_FK">
+      <End Role="ROL" EntitySet="ROL" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="RESERVA_SERV_EXTRA_FK" Association="Self.RESERVA_SERV_EXTRA_FK">
+      <End Role="SERVICIO_EXTRA" EntitySet="SERVICIO_EXTRA" />
+      <End Role="RESERVA_SERVICIO" EntitySet="RESERVA_SERVICIO" />
+    </AssociationSet>
+    <AssociationSet Name="RESERVA_TOUR_SERVICIO_TOURS_FK" Association="Self.RESERVA_TOUR_SERVICIO_TOURS_FK">
+      <End Role="SERVICIO_TOURS" EntitySet="SERVICIO_TOURS" />
+      <End Role="RESERVA_TOUR" EntitySet="RESERVA_TOUR" />
+    </AssociationSet>
+    <AssociationSet Name="SERVICIO_TOURS_ZONA_TOUR_FK" Association="Self.SERVICIO_TOURS_ZONA_TOUR_FK">
+      <End Role="ZONA_TOUR" EntitySet="ZONA_TOUR" />
+      <End Role="SERVICIO_TOURS" EntitySet="SERVICIO_TOURS" />
+    </AssociationSet>
+    <AssociationSet Name="RESERVA_TRANSPORTE_FK" Association="Self.RESERVA_TRANSPORTE_FK">
+      <End Role="SERVICIO_TRANSPORTE" EntitySet="SERVICIO_TRANSPORTE" />
+      <End Role="RESERVA_TRANSPORTE" EntitySet="RESERVA_TRANSPORTE" />
+    </AssociationSet>
+    <AssociationSet Name="RESERVA_ACOMP" Association="Self.RESERVA_ACOMP">
+      <End Role="ACOMPAÑANTE" EntitySet="ACOMPAÑANTE" />
+      <End Role="RESERVA" EntitySet="RESERVA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
