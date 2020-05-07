@@ -32,7 +32,7 @@ namespace Biblioteca
         {
             List<Ciudad> ciudades = new List<Ciudad>();
             List<CIUDAD> bd_ciudades = CommonBC.ModeloEntity.CIUDAD.ToList();
-
+            // Comentario de prueba GIT
             foreach (CIUDAD item in bd_ciudades)
             {
                 Ciudad c = new Ciudad();
