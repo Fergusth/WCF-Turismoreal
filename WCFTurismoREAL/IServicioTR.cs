@@ -63,5 +63,10 @@ namespace WCFTurismoREAL
         bool crearAcompaniante(string dNI, string nOMBRE_COMPLETO, string eXTRANJERO, string cORREO, int tELEFONO);
         [OperationContract]
         Acompaniante buscarAcompaniante(string dni);
+        // Tour
+        [OperationContract]
+        List<ServicioTour> buscarToursPorFechaYCiudad(DateTime fecha, int ciudad_id);
+        [OperationContract]
+        bool contratarServicioTour(short serv, short res);
     }
 }

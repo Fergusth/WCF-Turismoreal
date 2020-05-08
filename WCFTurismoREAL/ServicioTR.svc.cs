@@ -211,6 +211,19 @@ namespace WCFTurismoREAL
         {
             Acompaniante acompaniante = new Acompaniante();
             return acompaniante.buscarAcompaniante(dni);
-        }        
+        }
+
+        // Tour
+
+        public List<ServicioTour> buscarToursPorFechaYCiudad(DateTime fecha, int ciudad_id)
+        {
+            ServicioTour serv = new ServicioTour();
+            return serv.buscarToursPorFechaYCiudad(fecha, ciudad_id);
+        }
+        public bool contratarServicioTour(short serv, short res)
+        {
+            ServicioTour servi = new ServicioTour();
+            return servi.contratarServicioTour(serv, res);
+        }
     }
 }
