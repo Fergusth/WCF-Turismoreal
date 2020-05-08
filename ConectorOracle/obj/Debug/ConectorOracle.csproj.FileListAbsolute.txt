@@ -10,3 +10,13 @@ C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\obj\Debug\Conecto
 C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\obj\Debug\ConectorOracle.pdb
 C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\bin\Debug\Oracle.ManagedDataAccess.dll
 C:\Users\Gerald\source\repos\SLN_WCFTurismoREAL\ConectorOracle\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\karin\Source\Repos\WCF-Turismoreal\ConectorOracle\bin\Debug\ConectorOracle.dll.config
+C:\Users\karin\Source\Repos\WCF-Turismoreal\ConectorOracle\bin\Debug\ConectorOracle.dll
+C:\Users\karin\Source\Repos\WCF-Turismoreal\ConectorOracle\bin\Debug\ConectorOracle.pdb
+C:\Users\karin\Source\Repos\WCF-Turismoreal\ConectorOracle\bin\Debug\EntityFramework.dll
+C:\Users\karin\Source\Repos\WCF-Turismoreal\ConectorOracle\bin\Debug\EntityFramework.xml
+C:\Users\karin\Source\Repos\WCF-Turismoreal\ConectorOracle\obj\Debug\ConectorOracle.csprojAssemblyReference.cache
+C:\Users\karin\Source\Repos\WCF-Turismoreal\ConectorOracle\obj\Debug\ConectorOracle.csproj.CoreCompileInputs.cache
+C:\Users\karin\Source\Repos\WCF-Turismoreal\ConectorOracle\obj\Debug\ConectorOracle.csproj.CopyComplete
+C:\Users\karin\Source\Repos\WCF-Turismoreal\ConectorOracle\obj\Debug\ConectorOracle.dll
+C:\Users\karin\Source\Repos\WCF-Turismoreal\ConectorOracle\obj\Debug\ConectorOracle.pdb
