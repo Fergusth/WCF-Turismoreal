@@ -40,10 +40,10 @@ namespace Biblioteca
         {
         }
 
-        public List<ServicioTour> buscarToursPorFechaYCiudad(DateTime fecha, int ciudad_id)
+        public List<ServicioTour> buscarToursPorFechaYCiudad(DateTime fecha_inicio, DateTime fecha_fin, int ciudad_id)
         {
             List<ServicioTour> servicios = new List<ServicioTour>();
-            List<SERVICIO_TOURS> bd_servicios = CommonBC.ModeloEntity.SERVICIO_TOURS.Where(st => st.FECHA == fecha && st.ZONA_TOUR.CIUDAD_ID == ciudad_id && st.DISPONIBLE == "1").ToList();
+            List<SERVICIO_TOURS> bd_servicios = CommonBC.ModeloEntity.SERVICIO_TOURS.Where(st => st.FECHA >= fecha_inicio && st.FECHA <= fecha_fin && st.ZONA_TOUR.CIUDAD_ID == ciudad_id && st.DISPONIBLE == "1").ToList();
 
             foreach (SERVICIO_TOURS item in bd_servicios)
             {
