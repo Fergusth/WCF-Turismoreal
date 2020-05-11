@@ -24,8 +24,6 @@ namespace ConectorOracle
         public string HORA_SALIDA { get; set; }
         public int PRECIO_ACTUAL { get; set; }
         public string DISPONIBLE { get; set; }
-        public Nullable<short> MES_TEMP_DESDE { get; set; }
-        public Nullable<short> MES_TEMP_HASTA { get; set; }
         public System.DateTime FECHA { get; set; }
         public short ZONA_TOUR_ID_ZONA { get; set; }
     
