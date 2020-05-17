@@ -225,5 +225,29 @@ namespace WCFTurismoREAL
             ServicioTour servi = new ServicioTour();
             return servi.contratarServicioTour(serv, res);
         }
+
+        // Reserva
+
+        public Reserva crearReserva(DateTime fECHA_CHECKIN, DateTime fECHA_CHECKOUT, string hORA_CHECKIN, string hORA_CHECKOUT, string uSUARIO_DNI, int pRECIO_TOTAL, int tOTAL_PAGADO, string eSTADO, string fORMA_PAGO)
+        {
+            Reserva res = new Reserva();
+            res.FECHA_CHECKIN = fECHA_CHECKIN;
+            res.FECHA_CHECKOUT = fECHA_CHECKOUT;
+            res.HORA_CHECKIN = hORA_CHECKIN;
+            res.HORA_CHECKOUT = hORA_CHECKOUT;
+            res.USUARIO_DNI = uSUARIO_DNI;
+            res.PRECIO_TOTAL = pRECIO_TOTAL;
+            res.TOTAL_PAGADO = tOTAL_PAGADO;
+            res.ESTADO = eSTADO;
+            res.FORMA_PAGO = fORMA_PAGO;
+
+            return res.crearReserva();
+        }
+
+        public bool contratoReservaDepartamento(int id_reserva, int id_departamento)
+        {
+            Reserva res = new Reserva();
+            return res.contratoReservaDepartamento(id_reserva, id_departamento);
+        }
     }
 }

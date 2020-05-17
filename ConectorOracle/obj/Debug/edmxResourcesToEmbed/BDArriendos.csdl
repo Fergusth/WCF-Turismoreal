@@ -218,8 +218,6 @@
     <Property Name="HORA_SALIDA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="PRECIO_ACTUAL" Type="Int32" Nullable="false" />
     <Property Name="DISPONIBLE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="MES_TEMP_DESDE" Type="Int16" />
-    <Property Name="MES_TEMP_HASTA" Type="Int16" />
     <Property Name="FECHA" Type="DateTime" Nullable="false" />
     <Property Name="ZONA_TOUR_ID_ZONA" Type="Int16" Nullable="false" />
     <NavigationProperty Name="RESERVA_TOUR" Relationship="Self.RESERVA_TOUR_SERVICIO_TOURS_FK" FromRole="SERVICIO_TOURS" ToRole="RESERVA_TOUR" />
