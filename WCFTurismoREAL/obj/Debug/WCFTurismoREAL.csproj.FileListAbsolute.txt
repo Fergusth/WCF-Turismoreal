@@ -34,6 +34,7 @@ C:\Users\Gerald\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\obj\Debug\WCFTurismo
 C:\Users\Gerald\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\obj\Debug\WCFTurismoREAL.csproj.CopyComplete
 C:\Users\Gerald\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\obj\Debug\WCFTurismoREAL.dll
 C:\Users\Gerald\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\obj\Debug\WCFTurismoREAL.pdb
+<<<<<<< HEAD
 C:\Users\karin\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\bin\WCFTurismoREAL.dll.config
 C:\Users\karin\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\bin\WCFTurismoREAL.dll
 C:\Users\karin\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\bin\WCFTurismoREAL.pdb
@@ -50,3 +51,5 @@ C:\Users\karin\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\obj\Debug\WCFTurismoR
 C:\Users\karin\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\obj\Debug\WCFTurismoREAL.csproj.CopyComplete
 C:\Users\karin\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\obj\Debug\WCFTurismoREAL.dll
 C:\Users\karin\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\obj\Debug\WCFTurismoREAL.pdb
+=======
+>>>>>>> 5df31d4745bdbe05bb7b90a1312044e7726dccb8

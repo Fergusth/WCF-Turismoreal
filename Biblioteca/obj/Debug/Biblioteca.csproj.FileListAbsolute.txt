@@ -28,6 +28,7 @@ C:\Users\Gerald\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.csp
 C:\Users\Gerald\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.csproj.CopyComplete
 C:\Users\Gerald\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.dll
 C:\Users\Gerald\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.pdb
+<<<<<<< HEAD
 C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\bin\Debug\Biblioteca.dll.config
 C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\bin\Debug\Biblioteca.dll
 C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\bin\Debug\Biblioteca.pdb
@@ -41,3 +42,5 @@ C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.cspr
 C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.csproj.CopyComplete
 C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.dll
 C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.pdb
+=======
+>>>>>>> 5df31d4745bdbe05bb7b90a1312044e7726dccb8

@@ -68,5 +68,13 @@ namespace WCFTurismoREAL
         List<ServicioTour> buscarToursPorFechaYCiudad(DateTime fecha_inicio, DateTime fecha_fin, int ciudad_id);
         [OperationContract]
         bool contratarServicioTour(short serv, short res);
+<<<<<<< HEAD
+=======
+        // Reserva
+        [OperationContract]
+        Reserva crearReserva(DateTime fECHA_CHECKIN, DateTime fECHA_CHECKOUT, string hORA_CHECKIN, string hORA_CHECKOUT, string uSUARIO_DNI, int pRECIO_TOTAL, int tOTAL_PAGADO, string eSTADO, string fORMA_PAGO);
+        [OperationContract]
+        bool contratoReservaDepartamento(int id_reserva, int id_departamento);
+>>>>>>> 5df31d4745bdbe05bb7b90a1312044e7726dccb8
     }
 }
