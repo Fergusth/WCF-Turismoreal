@@ -197,8 +197,6 @@
           <ScalarProperty Name="HORA_SALIDA" ColumnName="HORA_SALIDA" />
           <ScalarProperty Name="PRECIO_ACTUAL" ColumnName="PRECIO_ACTUAL" />
           <ScalarProperty Name="DISPONIBLE" ColumnName="DISPONIBLE" />
-          <ScalarProperty Name="MES_TEMP_DESDE" ColumnName="MES_TEMP_DESDE" />
-          <ScalarProperty Name="MES_TEMP_HASTA" ColumnName="MES_TEMP_HASTA" />
           <ScalarProperty Name="FECHA" ColumnName="FECHA" />
           <ScalarProperty Name="ZONA_TOUR_ID_ZONA" ColumnName="ZONA_TOUR_ID_ZONA" />
         </MappingFragment>

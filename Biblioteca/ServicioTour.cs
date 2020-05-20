@@ -70,7 +70,7 @@ namespace Biblioteca
                 ser.RESERVA_ID_RESERVA = res;
                 ser.SERVICIO_TOURS_ID_TOUR = serv;
                 ser.PRECIO_CONTRATADO = servicio.PRECIO_ACTUAL;
-
+                ser.ESTADO = "ACTIVO";
 
 
                 ATEntities tr = CommonBC.ModeloEntity;
