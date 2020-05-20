@@ -226,6 +226,10 @@ namespace WCFTurismoREAL
             return servi.contratarServicioTour(serv, res);
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 42dd33ff03d05fdd0492120d0c216b51eae84881
         // Reserva
 
         public Reserva crearReserva(DateTime fECHA_CHECKIN, DateTime fECHA_CHECKOUT, string hORA_CHECKIN, string hORA_CHECKOUT, string uSUARIO_DNI, int pRECIO_TOTAL, int tOTAL_PAGADO, string eSTADO, string fORMA_PAGO)
@@ -249,5 +253,9 @@ namespace WCFTurismoREAL
             Reserva res = new Reserva();
             return res.contratoReservaDepartamento(id_reserva, id_departamento);
         }
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 42dd33ff03d05fdd0492120d0c216b51eae84881
     }
 }
