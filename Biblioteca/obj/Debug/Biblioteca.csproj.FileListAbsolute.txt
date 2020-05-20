@@ -28,3 +28,16 @@ C:\Users\Gerald\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.csp
 C:\Users\Gerald\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.csproj.CopyComplete
 C:\Users\Gerald\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.dll
 C:\Users\Gerald\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.pdb
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\bin\Debug\Biblioteca.dll.config
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\bin\Debug\Biblioteca.dll
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\bin\Debug\ConectorOracle.dll
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\bin\Debug\EntityFramework.dll
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\bin\Debug\ConectorOracle.pdb
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\bin\Debug\ConectorOracle.dll.config
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\bin\Debug\EntityFramework.xml
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.csprojAssemblyReference.cache
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.csproj.CopyComplete
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.dll
+C:\Users\karin\Source\Repos\WCF-Turismoreal\Biblioteca\obj\Debug\Biblioteca.pdb
