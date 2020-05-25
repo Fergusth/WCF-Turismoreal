@@ -192,6 +192,8 @@
     <EntitySetMapping Name="SERVICIO_TOURS">
       <EntityTypeMapping TypeName="BDArriendo.SERVICIO_TOURS">
         <MappingFragment StoreEntitySet="SERVICIO_TOURS">
+          <ScalarProperty Name="MES_TEMP_HASTA" ColumnName="MES_TEMP_HASTA" />
+          <ScalarProperty Name="MES_TEMP_DESDE" ColumnName="MES_TEMP_DESDE" />
           <ScalarProperty Name="ID_TOUR" ColumnName="ID_TOUR" />
           <ScalarProperty Name="HORA_LLEGADA" ColumnName="HORA_LLEGADA" />
           <ScalarProperty Name="HORA_SALIDA" ColumnName="HORA_SALIDA" />

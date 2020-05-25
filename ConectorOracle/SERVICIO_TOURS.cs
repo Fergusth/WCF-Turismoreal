@@ -26,6 +26,8 @@ namespace ConectorOracle
         public string DISPONIBLE { get; set; }
         public System.DateTime FECHA { get; set; }
         public short ZONA_TOUR_ID_ZONA { get; set; }
+        public Nullable<short> MES_TEMP_DESDE { get; set; }
+        public Nullable<short> MES_TEMP_HASTA { get; set; }
     
         public virtual ICollection<RESERVA_TOUR> RESERVA_TOUR { get; set; }
         public virtual ZONA_TOUR ZONA_TOUR { get; set; }

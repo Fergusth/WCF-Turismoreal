@@ -205,6 +205,8 @@
           <Property Name="HORA_SALIDA" Type="varchar2" MaxLength="5" Nullable="false" />
           <Property Name="PRECIO_ACTUAL" Type="number" Precision="8" Scale="0" Nullable="false" />
           <Property Name="DISPONIBLE" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="MES_TEMP_DESDE" Type="number" Precision="3" Scale="0" />
+          <Property Name="MES_TEMP_HASTA" Type="number" Precision="3" Scale="0" />
           <Property Name="FECHA" Type="date" Nullable="false" />
           <Property Name="ZONA_TOUR_ID_ZONA" Type="number" Precision="4" Scale="0" Nullable="false" />
         </EntityType>
@@ -999,6 +1001,8 @@
           <Property Name="ZONA_TOUR_ID_ZONA" Type="Int16" Nullable="false" />
           <NavigationProperty Name="RESERVA_TOUR" Relationship="Self.RESERVA_TOUR_SERVICIO_TOURS_FK" FromRole="SERVICIO_TOURS" ToRole="RESERVA_TOUR" />
           <NavigationProperty Name="ZONA_TOUR" Relationship="Self.SERVICIO_TOURS_ZONA_TOUR_FK" FromRole="SERVICIO_TOURS" ToRole="ZONA_TOUR" />
+          <Property Name="MES_TEMP_DESDE" Type="Int16" />
+          <Property Name="MES_TEMP_HASTA" Type="Int16" />
         </EntityType>
         <EntityType Name="SERVICIO_TRANSPORTE">
           <Key>
@@ -1722,6 +1726,8 @@
           <EntitySetMapping Name="SERVICIO_TOURS">
             <EntityTypeMapping TypeName="BDArriendo.SERVICIO_TOURS">
               <MappingFragment StoreEntitySet="SERVICIO_TOURS">
+                <ScalarProperty Name="MES_TEMP_HASTA" ColumnName="MES_TEMP_HASTA" />
+                <ScalarProperty Name="MES_TEMP_DESDE" ColumnName="MES_TEMP_DESDE" />
                 <ScalarProperty Name="ID_TOUR" ColumnName="ID_TOUR" />
                 <ScalarProperty Name="HORA_LLEGADA" ColumnName="HORA_LLEGADA" />
                 <ScalarProperty Name="HORA_SALIDA" ColumnName="HORA_SALIDA" />

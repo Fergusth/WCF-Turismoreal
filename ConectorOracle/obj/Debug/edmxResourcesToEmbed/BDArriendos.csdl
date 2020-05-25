@@ -222,6 +222,8 @@
     <Property Name="ZONA_TOUR_ID_ZONA" Type="Int16" Nullable="false" />
     <NavigationProperty Name="RESERVA_TOUR" Relationship="Self.RESERVA_TOUR_SERVICIO_TOURS_FK" FromRole="SERVICIO_TOURS" ToRole="RESERVA_TOUR" />
     <NavigationProperty Name="ZONA_TOUR" Relationship="Self.SERVICIO_TOURS_ZONA_TOUR_FK" FromRole="SERVICIO_TOURS" ToRole="ZONA_TOUR" />
+    <Property Name="MES_TEMP_DESDE" Type="Int16" />
+    <Property Name="MES_TEMP_HASTA" Type="Int16" />
   </EntityType>
   <EntityType Name="SERVICIO_TRANSPORTE">
     <Key>

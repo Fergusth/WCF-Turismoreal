@@ -200,6 +200,8 @@
     <Property Name="HORA_SALIDA" Type="varchar2" MaxLength="5" Nullable="false" />
     <Property Name="PRECIO_ACTUAL" Type="number" Precision="8" Scale="0" Nullable="false" />
     <Property Name="DISPONIBLE" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="MES_TEMP_DESDE" Type="number" Precision="3" Scale="0" />
+    <Property Name="MES_TEMP_HASTA" Type="number" Precision="3" Scale="0" />
     <Property Name="FECHA" Type="date" Nullable="false" />
     <Property Name="ZONA_TOUR_ID_ZONA" Type="number" Precision="4" Scale="0" Nullable="false" />
   </EntityType>
