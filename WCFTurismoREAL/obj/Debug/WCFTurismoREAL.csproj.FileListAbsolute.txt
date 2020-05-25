@@ -34,3 +34,7 @@ C:\Users\Gerald\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\obj\Debug\WCFTurismo
 C:\Users\Gerald\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\obj\Debug\WCFTurismoREAL.csproj.CopyComplete
 C:\Users\Gerald\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\obj\Debug\WCFTurismoREAL.dll
 C:\Users\Gerald\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\obj\Debug\WCFTurismoREAL.pdb
+C:\Users\Gerald\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\bin\Newtonsoft.Json.dll
+C:\Users\Gerald\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\bin\RestSharp.dll
+C:\Users\Gerald\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\bin\Newtonsoft.Json.xml
+C:\Users\Gerald\Source\Repos\WCF-Turismoreal\WCFTurismoREAL\bin\RestSharp.xml

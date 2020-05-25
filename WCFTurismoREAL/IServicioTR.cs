@@ -73,5 +73,15 @@ namespace WCFTurismoREAL
         Reserva crearReserva(DateTime fECHA_CHECKIN, DateTime fECHA_CHECKOUT, string hORA_CHECKIN, string hORA_CHECKOUT, string uSUARIO_DNI, int pRECIO_TOTAL, int tOTAL_PAGADO, string eSTADO, string fORMA_PAGO);
         [OperationContract]
         bool contratoReservaDepartamento(int id_reserva, int id_departamento);
+        [OperationContract]
+        List<Multa> listaMultasUsuario(string dni);
+        [OperationContract]
+        bool tieneMultas(string dni);
+        [OperationContract]
+        bool pagarMulta(int multa_id, int pago);
+        [OperationContract]
+        int getPorcentajeAnticipo();
+        [OperationContract]
+        FlowResponse generarLinkPago(int precio, string correo, string urlRet);
     }
 }
