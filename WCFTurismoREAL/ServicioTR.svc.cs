@@ -6,7 +6,10 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using Biblioteca;
+using RestSharp;
 using ConectorOracle;
+using Newtonsoft.Json;
+using System.Security.Cryptography;
 
 namespace WCFTurismoREAL
 {
@@ -249,5 +252,103 @@ namespace WCFTurismoREAL
             Reserva res = new Reserva();
             return res.contratoReservaDepartamento(id_reserva, id_departamento);
         }
+
+        public List<Multa> listaMultasUsuario(string dni)
+        {
+            Multa m = new Multa();
+            return m.listaMultasUsuario(dni);
+        }
+        
+        public bool tieneMultas(string dni)
+        {
+            return new Multa().tieneMultas(dni);
+        }
+
+        public bool pagarMulta(int multa_id, int pago)
+        {
+            return new Multa().pagar_multa(multa_id, pago);
+        }
+
+        public int getPorcentajeAnticipo()
+        {
+            PARAMETROS p = CommonBC.ModeloEntity.PARAMETROS.Where(pa => pa.NOMBRE == "ANTICIPO" && pa.TIPO == "ARRIENDO").First();
+            return int.Parse(p.VALOR);
+        }
+
+        public FlowResponse generarLinkPago(int precio, string correo, string urlRet)
+        {
+            // Variables de consulta
+            int randomNumber = new Random().Next(10, 80);
+            var amount = precio;
+            var commerceOrder = stringAleatorio(randomNumber);
+            var currency = "CLP";
+            var email = correo;
+            var paymentMethod = 9;
+            var subject = "Pago depa";
+            var urlConfirmation = "https://www.google.cl/";
+            var urlReturn = urlRet;
+            var apiKey = "4B7AF68B-9EFB-4692-BF3B-41C7LAE010D8";
+            var secretKey = "fb6eefb6ab2f2b2599630e6bde657f13bf93c053";
+            var toSign = "amount=" + amount +
+                         "&apiKey=" + apiKey +
+                         "&commerceOrder=" + commerceOrder +
+                         "&currency=" + currency +
+                         "&email=" + email +
+                         "&paymentMethod=" + paymentMethod +
+                         "&subject=" + subject +
+                         "&urlConfirmation=" + urlConfirmation +
+                         "&urlReturn=" + urlReturn;
+            var signature = GetHash(toSign, secretKey);
+
+            // Magia de la api
+
+            var client = new RestClient("https://sandbox.flow.cl/api");
+            var request = new RestRequest("payment/create", Method.POST);
+            request.AddParameter("apiKey", apiKey);
+            request.AddParameter("commerceOrder", commerceOrder);
+            request.AddParameter("subject", subject);
+            request.AddParameter("currency", currency);
+            request.AddParameter("amount", amount);
+            request.AddParameter("email", email);
+            request.AddParameter("paymentMethod", paymentMethod);
+            request.AddParameter("urlConfirmation", urlConfirmation);
+            request.AddParameter("urlReturn", urlReturn);
+            request.AddParameter("s", signature);
+
+            IRestResponse response = client.Execute(request);
+            var resp = JsonConvert.DeserializeObject<FlowResponse>(response.Content);
+            var ret = resp.url + "?token=" + resp.token;
+            return resp;
+        }
+        public static string GetHash(string text, string key)
+        {
+            // change according to your needs, an UTF8Encoding
+            // could be more suitable in certain situations
+            ASCIIEncoding encoding = new ASCIIEncoding();
+
+            byte[] textBytes = encoding.GetBytes(text);
+            byte[] keyBytes = encoding.GetBytes(key);
+
+            byte[] hashBytes;
+
+            using (HMACSHA256 hash = new HMACSHA256(keyBytes))
+                hashBytes = hash.ComputeHash(textBytes);
+
+            return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+        }
+        public string stringAleatorio(int longitud)
+        {
+            Guid miGuid = Guid.NewGuid();
+            string token = Convert.ToBase64String(miGuid.ToByteArray());
+            token = token.Replace("=", "").Replace("+", "");
+            return token;
+        }
     }
+}
+
+public class FlowResponse
+{
+    public string url;
+    public string token;
+    public string flowOrder;
 }
